@@ -1,0 +1,16 @@
+{
+  "name": "employee-helpdesk-root",
+  "version": "1.0.0",
+  "description": "Employee HelpDesk — monorepo root",
+  "private": true,
+  "scripts": {
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "mobile": "cd mobile && npx expo start"
+  },
+  "workspaces": [
+    "backend",
+    "frontend",
+    "mobile"
+  ]
+}
