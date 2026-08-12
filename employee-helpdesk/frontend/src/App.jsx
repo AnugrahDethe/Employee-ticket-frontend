@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard';
 import Tickets from './pages/Tickets';
 import CreateTicket from './pages/CreateTicket';
 import TicketDetails from './pages/TicketDetails';
+import Users from './pages/Users';
 
 // Layout wrapper that includes the Navbar for authenticated routes
 const AppLayout = ({ children }) => {
@@ -67,6 +68,16 @@ const AppRoutes = () => {
           <ProtectedRoute>
             <AppLayout>
               <TicketDetails />
+            </AppLayout>
+          </ProtectedRoute>
+        } 
+      />
+      <Route 
+        path="/users" 
+        element={
+          <ProtectedRoute>
+            <AppLayout>
+              <Users />
             </AppLayout>
           </ProtectedRoute>
         } 

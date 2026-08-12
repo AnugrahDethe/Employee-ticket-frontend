@@ -1,0 +1,124 @@
+.users-container {
+  padding: 2rem 1rem;
+}
+
+.users-loading, .users-error {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1rem;
+  color: var(--text-secondary, #6b7280);
+}
+
+.users-error {
+  color: #ef4444;
+}
+
+.users-header {
+  margin-bottom: 1.5rem;
+}
+
+.users-header h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary, #1f2937);
+  margin-bottom: 0.25rem;
+}
+
+.users-header p {
+  color: var(--text-secondary, #6b7280);
+  font-size: 0.9rem;
+}
+
+.users-table-wrapper {
+  background: var(--card-bg, #fff);
+  border-radius: 12px;
+  border: 1px solid var(--border, #e5e7eb);
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.users-table thead tr {
+  background: var(--bg-secondary, #f9fafb);
+  border-bottom: 1px solid var(--border, #e5e7eb);
+}
+
+.users-table th {
+  text-align: left;
+  padding: 0.85rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary, #6b7280);
+}
+
+.users-table td {
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid var(--border, #f3f4f6);
+  color: var(--text-primary, #1f2937);
+  vertical-align: middle;
+}
+
+.users-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.users-table tbody tr:hover {
+  background: var(--bg-secondary, #f9fafb);
+}
+
+.user-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+}
+
+.user-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.role-badge.role-admin {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.role-badge.role-support {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.role-badge.role-employee {
+  background: #d1fae5;
+  color: #059669;
+}

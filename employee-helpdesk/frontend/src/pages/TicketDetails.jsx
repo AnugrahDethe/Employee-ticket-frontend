@@ -204,10 +204,11 @@ const TicketDetails = () => {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
                         {ticket.attachments.map((filePath, index) => {
                             const fileName = filePath.split('/').pop();
+                            const baseUrl = (import.meta.env.VITE_API_URL || 'http://localhost:5000').replace(/\/api$/, '');
                             return (
                                 <div key={index} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.5rem', backgroundColor: '#f9fafb', borderRadius: '4px', border: '1px solid #e5e7eb', fontSize: '0.85rem' }}>
                                     <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '150px' }}>📎 {fileName}</span>
-                                    <a href={`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${filePath}`} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: '500' }}>
+                                    <a href={`${baseUrl}${filePath}`} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: '500' }}>
                                         View
                                     </a>
                                 </div>

@@ -14,9 +14,10 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+// API Routes
 app.use('/api/auth', require('./routes/authRoutes'));
-// app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/tickets', require('./routes/ticketRoutes'));
+app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/notifications', require('./routes/notificationRoutes'));
 
 // Serve uploads folder statically
