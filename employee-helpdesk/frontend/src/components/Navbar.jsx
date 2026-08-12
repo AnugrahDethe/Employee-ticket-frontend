@@ -61,7 +61,10 @@ const Navbar = () => {
         console.error('Failed to mark as read', err);
       }
     }
-    navigate(`/tickets/${notif.relatedTicket?._id || notif.relatedTicket}`);
+    const ticketId = notif.relatedTicket?._id || notif.relatedTicket;
+    if (ticketId && ticketId !== 'null') {
+      navigate(`/tickets/${ticketId}`);
+    }
   };
 
   const isActive = (path) => location.pathname === path ? 'nav-link active' : 'nav-link';
